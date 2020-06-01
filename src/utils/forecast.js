@@ -8,7 +8,7 @@ const forecast =(latitude, longitude, callback)=>{
     }else if(body.error){
       callback('Invalid location, try something else',undefined)
     }else{
-      callback(undefined, body.current.weather_descriptions+ '. It is currently '+body.current.temperature+' but it feels like '+body.current.feelslike)
+      callback(undefined,"Humidity is "+ body.current.humidity +" "+ body.current.weather_descriptions+ '. It is currently '+body.current.temperature+' but it feels like '+body.current.feelslike)
     }
   })
 }
